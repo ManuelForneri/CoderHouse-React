@@ -5,8 +5,9 @@ import { IconButton } from "@material-tailwind/react";
 function CartWidget() {
   return (
     <>
-      <IconButton>
+      <IconButton className="flex bg-transparent text-black text-3xl border-opacity-0 hover:bg-gray-400 shadow-none hover:shadow-none ">
         <AiOutlineShoppingCart />
+        <span>3</span>
       </IconButton>
     </>
   );
