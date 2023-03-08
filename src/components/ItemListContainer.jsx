@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
+import Item from "./Item";
 
 function ItemListContainer() {
   const getProducts = async () => {
@@ -9,14 +9,24 @@ function ItemListContainer() {
     return data;
   };
   const [products, setProducts] = useState([]);
-  console.log("Products" + products);
 
   useEffect(() => {
     getProducts().then((products) => setProducts(products));
   }, []);
   return (
-    <div className="bg-blue-gray-800">
-      <ProductCard />
+    <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
+      {products.map((prod) => {
+        return (
+          <Item
+            key={prod.id}
+            title={prod.title}
+            price={prod.price}
+            image={prod.image}
+            description={prod.description}
+            category={prod.category}
+          />
+        );
+      })}
     </div>
   );
 }
