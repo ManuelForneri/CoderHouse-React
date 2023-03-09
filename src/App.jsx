@@ -1,13 +1,18 @@
 import "./App.css";
 import ItemListContainer from "./components/ItemListContainer";
 import NavBar from "./components/NavBar";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Welcome from "./components/Welcome";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer />
-    </>
+      <Routes>
+        <Route exact path="/Products" element={<ItemListContainer />} />
+        <Route exact path="/" element={<Welcome />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
