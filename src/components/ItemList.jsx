@@ -1,7 +1,23 @@
 import React from "react";
+import Item from "./Item";
 
-const ComponenteA = () => {
-  return <div>ComponenteA</div>;
+const ItemList = ({ products }) => {
+  return (
+    <div className="flex flex-wrap gap-8 justify-center p-5 w-full">
+      {products.map((prod) => {
+        return (
+          <Item
+            key={prod.id}
+            title={prod.title}
+            price={prod.price}
+            image={prod.image}
+            description={prod.description}
+            category={prod.category}
+          />
+        );
+      })}
+    </div>
+  );
 };
 
-export default ComponenteA;
+export default ItemList;

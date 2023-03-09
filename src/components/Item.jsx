@@ -9,6 +9,7 @@ const Item = (props) => {
         <img className="h-96 w-full " src={props.image} />
         <div className="px-6 py-4  ">
           <div className="font-bold text-xl mb-2">{props.title}</div>
+          <div className="font-bold text-xl mb-2">${props.price}</div>
           <p className="text-gray-700 text-base">{props.description}</p>
         </div>
       </div>
