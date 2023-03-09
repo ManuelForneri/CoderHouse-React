@@ -13,7 +13,7 @@ function NavBar() {
               Home
             </button>
           </Link>
-          <Link to="/Products">
+          <Link to="/category">
             <button className="hover:bg-gray-200 p-2 text-white hover:text-black ">
               Products
             </button>
@@ -27,9 +27,7 @@ function NavBar() {
               <option>Categorias</option>
 
               <option>
-                <Link to={`Products/Category/${"men's clothing"}`}>
-                  men's clothing
-                </Link>
+                <Link to={`category/${"mens-clothing"}`}>men's clothing</Link>
               </option>
 
               <option>
