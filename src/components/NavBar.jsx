@@ -1,4 +1,3 @@
-import { Button } from "@material-tailwind/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
@@ -13,7 +12,7 @@ function NavBar() {
               Home
             </button>
           </Link>
-          <Link to="/category">
+          <Link to="/products">
             <button className="hover:bg-gray-200 p-2 text-white hover:text-black ">
               Products
             </button>
@@ -27,11 +26,11 @@ function NavBar() {
               <option>Categorias</option>
 
               <option>
-                <Link to={`category/${"mens-clothing"}`}>men's clothing</Link>
+                <Link to={`category/${"men's clothing"}`}>men's clothing</Link>
               </option>
 
               <option>
-                <Link>jewelery</Link>
+                <Link to={`products/${"jewelery"}`}>jewelery</Link>
               </option>
 
               <option>
