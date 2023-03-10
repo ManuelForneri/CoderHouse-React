@@ -26,19 +26,21 @@ function NavBar() {
               <option>Categorias</option>
 
               <option>
-                <Link to={`category/${"men's clothing"}`}>men's clothing</Link>
+                <Link to={`/products/${"men's clothing"}`}>men's clothing</Link>
               </option>
 
               <option>
-                <Link to={`products/${"jewelery"}`}>jewelery</Link>
+                <Link to={`/products/${"jewelery"}`}>jewelery</Link>
               </option>
 
               <option>
-                <Link>electronics</Link>
+                <Link to={`/products/${"electronics"}`}>electronics</Link>
               </option>
 
               <option>
-                <Link>women's clothing</Link>
+                <Link to={`/products/${"women's clothing"}`}>
+                  women's clothing
+                </Link>
               </option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
