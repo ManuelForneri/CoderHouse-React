@@ -4,7 +4,7 @@
 
 # Introducción
 
-**En este proyecto lo que se busco es el aprendizaje de las distintas tecnologias y herramientas que proporciona React JS**
+**En este proyecto lo que se busco es el aprendizaje de las distintas tecnologias y herramientas que proporciona React JS y la practica del Framework de css (Tailwind)**
 
 # Tecnologías utilizadas
 
