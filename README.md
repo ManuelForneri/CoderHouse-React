@@ -8,7 +8,7 @@
 
 # Tecnologías utilizadas
 
-[![react-tailwind.png](https://i.postimg.cc/HkPfrwqY/react-tailwind.png)](https://postimg.cc/k2KjZbMz)
+[![react-tailwind.png](https://i.postimg.cc/BZLVr42v/react-tailwind.png)](https://postimg.cc/dDF6dMHM)
 
 # Autor
 
