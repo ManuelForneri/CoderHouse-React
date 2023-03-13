@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
-  const { category } = useParams();
+  const { categoryId } = useParams();
   const getProducts = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     const data = response.json();
@@ -13,18 +13,18 @@ function ItemListContainer() {
   };
 
   useEffect(() => {
-    getProducts().then((products) => setProducts(products));
-  }, []);
-
-  const catFilter = products.filter((prod) => prod.category === category);
+    getProducts().then((products) => {
+      if (categoryId) {
+        setProducts(products.filter((prod) => prod.category === categoryId));
+      } else {
+        setProducts(products);
+      }
+    });
+  }, [categoryId]);
 
   return (
     <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
-      {category ? (
-        <ItemList products={catFilter} />
-      ) : (
-        <ItemList products={products} />
-      )}
+      <ItemList products={products} />
     </div>
   );
 }
