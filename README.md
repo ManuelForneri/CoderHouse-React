@@ -13,3 +13,6 @@
 # Autor
 
 **- Manuel Forneri**
+
+# Prueba de Categorias
+[![Prueba-Categorias.gif](https://i.postimg.cc/BnsPf6DT/Prueba-Categorias.gif)](https://postimg.cc/5672wfsy)
