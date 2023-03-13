@@ -26,22 +26,30 @@ function ItemListContainer() {
   return (
     <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
       <div className="flex gap-6 text-white  ">
-        <div className="flex items-center">
-          <Checkbox />
-          <Link to="/products/men's clothing">men's clothing</Link>
-        </div>
-        <div className="flex items-center">
-          <Checkbox />
-          <Link to="/products/jewelery">jewelery</Link>
-        </div>
-        <div className="flex items-center">
-          <Checkbox />
-          <Link to="/products/electronics">electronics</Link>
-        </div>
-        <div className="flex items-center">
-          <Checkbox />
-          <Link to="/products/women's clothing">women's clothing</Link>
-        </div>
+        <Link
+          to="/products/men's clothing"
+          className="bg-teal-300 p-3 hover:bg-teal-600"
+        >
+          Men's clothing
+        </Link>
+        <Link
+          to="/products/jewelery"
+          className="bg-teal-300 p-3 hover:bg-teal-600"
+        >
+          Jewelery
+        </Link>
+        <Link
+          to="/products/electronics"
+          className="bg-teal-300 p-3 hover:bg-teal-600"
+        >
+          Electronics
+        </Link>
+        <Link
+          to="/products/women's clothing"
+          className="bg-teal-300 p-3 hover:bg-teal-600"
+        >
+          Women's clothing
+        </Link>
       </div>
       <ItemList products={products} />
     </div>
