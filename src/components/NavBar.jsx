@@ -25,21 +25,13 @@ function NavBar() {
             >
               <option>Categorias</option>
 
-              <option>
-                <Link to="/category/men's clothing">men's clothing</Link>
-              </option>
+              <option></option>
 
-              <option>
-                <Link to="/category/jewelery">jewelery</Link>
-              </option>
+              <option></option>
 
-              <option>
-                <Link to="/category/electronics">electronics</Link>
-              </option>
+              <option></option>
 
-              <option>
-                <Link to="/category/women's clothing">women's clothing</Link>
-              </option>
+              <option></option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
               <svg
