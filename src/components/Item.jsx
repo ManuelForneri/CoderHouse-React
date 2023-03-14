@@ -1,3 +1,4 @@
+import { Button } from "@material-tailwind/react";
 import React from "react";
 
 const Item = (props) => {
@@ -18,6 +19,9 @@ const Item = (props) => {
           #{props.category}
         </span>
       </div>
+      <Button className="bg-teal-500 rounded-none hover:bg-teal-200 hover:text-black">
+        Detalles
+      </Button>
     </div>
   );
 };
