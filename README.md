@@ -15,4 +15,4 @@
 **- Manuel Forneri**
 
 # Prueba de Categorias
-[![Prueba-Categorias.gif](https://i.postimg.cc/BnsPf6DT/Prueba-Categorias.gif)](https://postimg.cc/5672wfsy)
+[![Prueba-Categorias.gif](https://i.postimg.cc/XvRs63Kk/Prueba-Categorias.gif)](https://postimg.cc/67hrCkm8)
