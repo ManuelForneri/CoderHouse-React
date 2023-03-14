@@ -27,25 +27,25 @@ function ItemListContainer() {
     <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
       <div className="flex gap-6 text-white  ">
         <Link
-          to="/products/men's clothing"
+          to="/category/men's clothing"
           className="bg-teal-300 p-3 hover:bg-teal-600"
         >
           Men's clothing
         </Link>
         <Link
-          to="/products/jewelery"
+          to="/category/jewelery"
           className="bg-teal-300 p-3 hover:bg-teal-600"
         >
           Jewelery
         </Link>
         <Link
-          to="/products/electronics"
+          to="/category/electronics"
           className="bg-teal-300 p-3 hover:bg-teal-600"
         >
           Electronics
         </Link>
         <Link
-          to="/products/women's clothing"
+          to="/category/women's clothing"
           className="bg-teal-300 p-3 hover:bg-teal-600"
         >
           Women's clothing
