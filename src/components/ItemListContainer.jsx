@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
-import { Checkbox } from "@material-tailwind/react";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -25,7 +24,7 @@ function ItemListContainer() {
 
   return (
     <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
-      <div className="flex gap-6 text-white  ">
+      <div className="flex flex-wrap justify-center gap-6 text-white  ">
         <Link
           to="/category/men's clothing"
           className="bg-teal-300 p-3 hover:bg-teal-600"
