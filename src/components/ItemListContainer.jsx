@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
-import { Checkbox } from "@material-tailwind/react";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
