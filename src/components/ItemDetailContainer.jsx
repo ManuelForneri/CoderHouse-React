@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import React from "react";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -22,7 +21,7 @@ const ItemDetailContainer = () => {
   }, [id]);
   console.log(products);
   return (
-    <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
+    <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full h-screen">
       {products.map((prod) => {
         return (
           <ItemDetail
@@ -38,7 +37,6 @@ const ItemDetailContainer = () => {
       })}
     </div>
   );
-  return <div>ItemDetailContainer</div>;
 };
 
 export default ItemDetailContainer;
