@@ -13,7 +13,7 @@ const ItemDetail = (props) => {
     }
   }
   return (
-    <div className="w-4/5 p-14 rounded overflow-hidden shadow-lg bg-blue-gray-200 flex flex-col justify-between">
+    <div className="w-4/5 p-10 rounded overflow-hidden shadow-lg bg-blue-gray-200 flex flex-col justify-between">
       <div className="flex">
         <img className=" w-1/4  " src={props.image} />
         <div className="flex flex-col px-6 py-4 gap-7 ">
