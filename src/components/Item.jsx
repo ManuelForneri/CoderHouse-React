@@ -17,7 +17,7 @@ const Item = (props) => {
       </div>
       <Link
         to={`/item/${props.id}`}
-        className="bg-teal-500 rounded-none hover:bg-teal-200 hover:text-black text-center p-3"
+        className="text-white bg-teal-500 rounded-none hover:bg-teal-200 hover:text-black text-center p-3"
       >
         Detalles
       </Link>
