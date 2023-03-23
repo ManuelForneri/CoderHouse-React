@@ -9,9 +9,9 @@ const ItemList = ({ products }) => {
           <Item
             key={prod.id}
             id={prod.id}
-            title={prod.title}
-            image={prod.image}
-            category={prod.category}
+            title={prod.Titulo}
+            image={prod.Imagen}
+            category={prod.Categoria}
           />
         );
       })}
