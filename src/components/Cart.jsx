@@ -1,7 +1,10 @@
-import React from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/ShoppingCartProvider";
 
 const Cart = () => {
-  return <div>Soy el Cart</div>;
+  const { cart, setCart, comision } = useContext(CartContext);
+  console.log(cart);
+  return <div></div>;
 };
 
 export default Cart;
