@@ -5,7 +5,7 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
-  const { categoryId } = useParams();
+  const { Categoria } = useParams();
 
   useEffect(() => {
     const db = getFirestore();
@@ -13,38 +13,35 @@ function ItemListContainer() {
     const itemsCollection = collection(db, "productos");
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => doc.data());
-
-      setProducts(docs);
+      if (Categoria) {
+        setProducts(docs.filter((prod) => prod.Categoria === Categoria));
+      } else {
+        setProducts(docs);
+      }
     });
-  }, []);
+  }, [Categoria]);
   console.log(products);
 
   return (
-    <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full">
+    <div className=" flex flex-wrap gap-8 justify-center p-5 w-full">
       <div className="flex gap-6 text-white  ">
         <Link
-          to="/category/men's clothing"
-          className="bg-teal-300 p-3 hover:bg-teal-600"
+          to="/categoria/Joyeria"
+          className="color-principal p-3 hover:bg-white hover:text-black"
         >
-          Men's clothing
+          Joyeria
         </Link>
         <Link
-          to="/category/jewelery"
-          className="bg-teal-300 p-3 hover:bg-teal-600"
+          to="/categoria/Relojeria"
+          className="color-principal p-3 hover:bg-white hover:text-black"
         >
-          Jewelery
+          Relojeria
         </Link>
         <Link
-          to="/category/electronics"
-          className="bg-teal-300 p-3 hover:bg-teal-600"
+          to="/categoria/Varios"
+          className="color-principal p-3 hover:bg-white hover:text-black"
         >
-          Electronics
-        </Link>
-        <Link
-          to="/category/women's clothing"
-          className="bg-teal-300 p-3 hover:bg-teal-600"
-        >
-          Women's clothing
+          Varios
         </Link>
       </div>
       <ItemList products={products} />

@@ -4,10 +4,9 @@ export const CartContext = createContext(null);
 
 const ShoppingCartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const comision = 51100;
 
   return (
-    <CartContext.Provider value={{ cart, setCart, comision }}>
+    <CartContext.Provider value={{ cart, setCart }}>
       {children}
     </CartContext.Provider>
   );
