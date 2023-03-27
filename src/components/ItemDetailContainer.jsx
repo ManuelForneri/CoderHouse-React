@@ -4,7 +4,7 @@ import ItemDetail from "./ItemDetail";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-  //const { id } = useParams();
+  const { id } = useParams();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -13,8 +13,11 @@ const ItemDetailContainer = () => {
     const itemsCollection = collection(db, "productos");
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => doc.data());
-
-      setProducts(docs);
+      if (Categoria) {
+        setProducts(docs.filter((prod) => prod.id === id));
+      } else {
+        setProducts(docs);
+      }
     });
   }, []);
   console.log(products);
