@@ -5,7 +5,7 @@ const Item = (props) => {
   return (
     <div className="w-96 rounded overflow-hidden shadow-lg  bg-brown-50 flex flex-col justify-between">
       <div>
-        <img className="h-96 w-full " src={props.image} />
+        <img className="h-96 w-full p-2 " src={props.image} />
         <div className="px-6 py-4  ">
           <div className="font-bold text-xl mb-2">{props.title}</div>
         </div>

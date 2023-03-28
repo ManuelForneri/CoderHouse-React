@@ -12,18 +12,20 @@ const ItemDetailContainer = () => {
 
     const itemsCollection = collection(db, "productos");
     getDocs(itemsCollection).then((snapshot) => {
-      const docs = snapshot.docs.map((doc) => doc.data());
+      const docs = snapshot.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
       if (id) {
         setProducts(docs.filter((prod) => prod.id === id));
       } else {
         setProducts(docs);
       }
-      console.log(products);
     });
   }, [id]);
+  console.log(products);
 
   return (
-    <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full h-screen">
+    <div className=" flex flex-wrap gap-8 justify-center p-5 w-full h-screen">
       {products.map((prod) => {
         return (
           <ItemDetail

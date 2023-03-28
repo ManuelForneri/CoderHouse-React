@@ -13,27 +13,31 @@ const ItemDetail = (props) => {
     }
   }
   return (
-    <div className="w-4/5  rounded overflow-hidden shadow-lg bg-blue-gray-200 flex flex-col justify-center justify-items">
+    <div className="rounded overflow-hidden shadow-lg bg-brown-50 flex flex-col justify-center justify-items">
       <div className="flex justify-around">
-        <img className=" w-1/3  " src={props.image} />
-        <div className="flex flex-col px-6 py-4 gap-7 w-1/2 ">
-          <div className="font-bold text-xl mb-2">{props.title}</div>
-          <div class="font-bold text-xl mb-2">${props.price}</div>
-          <p class="text-gray-700 text-base">{props.description}</p>
+        <div className="w-1/2">
+          <img className=" w-full h-auto " src={props.image} />
+        </div>
+        <div className="w-1/2">
+          <div className="flex flex-col px-6 py-4 gap-7 h-full justify-between">
+            <div className="font-bold text-xl mb-2">{props.title}</div>
+            <div class="font-bold text-xl mb-2">${props.price}</div>
+            <p class="text-gray-700 text-base">{props.description}</p>
 
-          <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-black mr-2 mb-2">
-            {props.category}
-          </span>
-          <div>
-            <Button onClick={onSuma} className="bg-teal-400">
-              +
-            </Button>
-            <span className="bg-white p-2 m-3 rounded-md">{count}</span>
-            <Button onClick={onResta} className="bg-teal-400">
-              -
-            </Button>
+            <span className="flex color-principal rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 w-1/3 justify-center">
+              {props.category}
+            </span>
+            <div>
+              <Button onClick={onSuma} className="color-principal">
+                +
+              </Button>
+              <span className="bg-white p-2 m-3 rounded-md">{count}</span>
+              <Button onClick={onResta} className="color-principal">
+                -
+              </Button>
+            </div>
+            <Button className="color-principal">Agregar al carrito</Button>
           </div>
-          <Button className="bg-teal-400">Agregar al carrito</Button>
         </div>
       </div>
     </div>
