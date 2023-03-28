@@ -13,14 +13,14 @@ const ItemDetailContainer = () => {
     const itemsCollection = collection(db, "productos");
     getDocs(itemsCollection).then((snapshot) => {
       const docs = snapshot.docs.map((doc) => doc.data());
-      if (Categoria) {
+      if (id) {
         setProducts(docs.filter((prod) => prod.id === id));
       } else {
         setProducts(docs);
       }
+      console.log(products);
     });
-  }, []);
-  console.log(products);
+  }, [id]);
 
   return (
     <div className="bg-blue-gray-800 flex flex-wrap gap-8 justify-center p-5 w-full h-screen">

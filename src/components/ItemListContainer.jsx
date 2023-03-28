@@ -12,15 +12,17 @@ function ItemListContainer() {
 
     const itemsCollection = collection(db, "productos");
     getDocs(itemsCollection).then((snapshot) => {
-      const docs = snapshot.docs.map((doc) => doc.data());
+      const docs = snapshot.docs.map((doc) => {
+        id: doc.id, doc.data();
+      });
       if (Categoria) {
         setProducts(docs.filter((prod) => prod.Categoria === Categoria));
       } else {
         setProducts(docs);
       }
+      //console.log(products);
     });
   }, [Categoria]);
-  console.log(products);
 
   return (
     <div className=" flex flex-wrap gap-8 justify-center p-5 w-full">
