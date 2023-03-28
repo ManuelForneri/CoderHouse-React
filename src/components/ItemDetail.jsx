@@ -16,7 +16,7 @@ const ItemDetail = (props) => {
     <div className="rounded overflow-hidden shadow-lg bg-brown-50 flex flex-col justify-center justify-items">
       <div className="flex justify-around">
         <div className="w-1/2">
-          <img className=" w-full h-auto " src={props.image} />
+          <img className=" w-full h-auto p-1 " src={props.image} />
         </div>
         <div className="w-1/2">
           <div className="flex flex-col px-6 py-4 gap-7 h-full justify-between">
@@ -28,15 +28,23 @@ const ItemDetail = (props) => {
               {props.category}
             </span>
             <div>
-              <Button onClick={onSuma} className="color-principal">
+              <Button
+                onClick={onSuma}
+                className="color-principal shadow-none hover:shadow-white"
+              >
                 +
               </Button>
               <span className="bg-white p-2 m-3 rounded-md">{count}</span>
-              <Button onClick={onResta} className="color-principal">
+              <Button
+                onClick={onResta}
+                className="color-principal shadow-none hover:shadow-white"
+              >
                 -
               </Button>
             </div>
-            <Button className="color-principal">Agregar al carrito</Button>
+            <Button className="color-principal shadow-none hover:shadow-white  ">
+              Agregar al carrito
+            </Button>
           </div>
         </div>
       </div>
