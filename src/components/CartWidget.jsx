@@ -9,7 +9,7 @@ function CartWidget() {
       <Link to="/carrito">
         <IconButton className="flex bg-transparent text-white hover:text-black text-3xl border-opacity-0 hover:bg-gray-200 shadow-none hover:shadow-none rounded-none ">
           <AiOutlineShoppingCart />
-          <span>3</span>
+          <span></span>
         </IconButton>
       </Link>
     </>

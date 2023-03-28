@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           />
           <Route exact path="/item/:id" element={<ItemDetailContainer />} />
           <Route exact path="/carrito" element={<Cart />} />
+          <Route exact path="/contacto" element={<Contact />} />
         </Routes>
         <Footer />
       </BrowserRouter>

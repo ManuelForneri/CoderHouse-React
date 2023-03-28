@@ -17,6 +17,11 @@ function NavBar() {
               Products
             </button>
           </Link>
+          <Link to="/contacto">
+            <button className="hover:bg-gray-200 p-2 text-white hover:text-black ">
+              Contacto
+            </button>
+          </Link>
         </div>
 
         <CartWidget />

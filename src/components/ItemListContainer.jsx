@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
+import Loading from "./Loading";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { Categoria } = useParams();
 
   useEffect(() => {
@@ -17,8 +19,10 @@ function ItemListContainer() {
       });
       if (Categoria) {
         setProducts(docs.filter((prod) => prod.Categoria === Categoria));
+        setLoading(false);
       } else {
         setProducts(docs);
+        setLoading(false);
       }
     });
   }, [Categoria]);
@@ -46,7 +50,7 @@ function ItemListContainer() {
           Varios
         </Link>
       </div>
-      <ItemList products={products} />
+      {loading ? <Loading /> : <ItemList products={products} />}
     </div>
   );
 }
