@@ -37,7 +37,6 @@ const ItemDetailContainer = () => {
             description={prod.Descripcion}
             category={prod.Categoria}
             stock={prod.Stock}
-            products={products}
           />
         );
       })}

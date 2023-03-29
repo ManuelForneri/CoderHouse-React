@@ -1,10 +1,11 @@
 import { Button } from "@material-tailwind/react";
 import React, { useContext, useState } from "react";
+import Swal from "sweetalert2";
 import { CartContext } from "../context/ShoppingCartProvider";
 
 const ItemCount = (props) => {
-  const [count, setCount] = useState(0);
-  const { cart, setCart } = useContext(CartContext);
+  const [count, setCount] = useState(1);
+  const { AddProductCart, cart } = useContext(CartContext);
 
   function onSuma() {
     if (count < props.stock) {
@@ -12,15 +13,10 @@ const ItemCount = (props) => {
     }
   }
   function onResta() {
-    if (count != 0) {
+    if (count != 1) {
       setCount(count - 1);
     }
   }
-  function addProductCart() {
-    setCart(...cart);
-    console.log(cart);
-  }
-  function findCartProduct() {}
 
   return (
     <div className="flex flex-col  gap-5">
@@ -41,7 +37,9 @@ const ItemCount = (props) => {
         </Button>
       </div>
       <Button
-        onClick={addProductCart}
+        onClick={() => {
+          AddProductCart(id, count);
+        }}
         className="color-principal shadow-none hover:shadow-white  "
       >
         Agregar al carrito

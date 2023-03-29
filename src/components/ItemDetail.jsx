@@ -17,11 +17,7 @@ const ItemDetail = (props) => {
             <span className="flex color-principal rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 w-1/3 justify-center">
               {props.category}
             </span>
-            <ItemCount
-              stock={props.stock}
-              id={props.id}
-              products={props.products}
-            />
+            <ItemCount stock={props.stock} id={props.id} />
           </div>
         </div>
       </div>
