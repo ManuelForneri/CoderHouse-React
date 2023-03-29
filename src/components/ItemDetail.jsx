@@ -1,17 +1,7 @@
-import { Button } from "@material-tailwind/react";
-import React, { useState } from "react";
+import React from "react";
+import ItemCount from "./ItemCount";
 
 const ItemDetail = (props) => {
-  const [count, setCount] = useState(0);
-
-  function onSuma() {
-    setCount(count + 1);
-  }
-  function onResta() {
-    if (count != 0) {
-      setCount(count - 1);
-    }
-  }
   return (
     <div className="rounded overflow-hidden shadow-lg bg-brown-50 flex flex-col justify-center justify-items">
       <div className="flex justify-around">
@@ -27,24 +17,11 @@ const ItemDetail = (props) => {
             <span className="flex color-principal rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 w-1/3 justify-center">
               {props.category}
             </span>
-            <div>
-              <Button
-                onClick={onSuma}
-                className="color-principal shadow-none hover:shadow-white"
-              >
-                +
-              </Button>
-              <span className="bg-white p-2 m-3 rounded-md">{count}</span>
-              <Button
-                onClick={onResta}
-                className="color-principal shadow-none hover:shadow-white"
-              >
-                -
-              </Button>
-            </div>
-            <Button className="color-principal shadow-none hover:shadow-white  ">
-              Agregar al carrito
-            </Button>
+            <ItemCount
+              stock={props.stock}
+              id={props.id}
+              products={props.products}
+            />
           </div>
         </div>
       </div>
