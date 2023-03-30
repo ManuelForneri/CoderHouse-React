@@ -1,17 +1,34 @@
 import { Button } from "@material-tailwind/react";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import { CartContext } from "../context/ShoppingCartProvider";
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
   let total = 0;
 
+  function onClearCart() {
+    Swal.fire({
+      title: "Esta seguro que quiere vaciar el carrito",
+      text: ".",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, vaciar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Carrito!", "Vaciado correctamente.", "success");
+        clearCart();
+        total = 0;
+      }
+    });
+  }
   console.log(cart);
 
   return (
     <>
-      <div className="flex justify-center flex-wrap h-full gap-5">
+      <div className="flex justify-center flex-wrap min-h-screen gap-5">
         {cart.map((p) => {
           {
             total += p.Precio * p.quantity;
@@ -34,11 +51,27 @@ const Cart = () => {
                   cantidad: {p.quantity}
                 </span>
               </div>
+              <Button
+                onClick=""
+                className="text-white color-principal rounded-none hover:bg-white hover:text-black text-center p-3"
+              >
+                Eliminar
+              </Button>
             </div>
           );
         })}
       </div>
-      <div className="text-white text-3xl text-center">Total : ${total}</div>
+      <div className="text-white text-3xl text-center m-5">
+        Total : ${total}
+      </div>
+      <Button
+        onClick={() => {
+          onClearCart();
+        }}
+        className="flex m-auto bg-red-400 shadow-none mb-5 hover:shadow-gray-200 "
+      >
+        Vaciar Carrito
+      </Button>
     </>
   );
 };

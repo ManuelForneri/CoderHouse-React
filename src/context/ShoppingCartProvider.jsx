@@ -45,6 +45,10 @@ const ShoppingCartProvider = ({ children }) => {
     setCart(newCart);
     setCartQuantity(total);
   };
+  const clearCart = () => {
+    setCart([]);
+    setCartQuantity(0);
+  };
 
   return (
     <CartContext.Provider
@@ -54,6 +58,7 @@ const ShoppingCartProvider = ({ children }) => {
         findProduct,
         setCart,
         cartQuantity,
+        clearCart,
       }}
     >
       {children}
