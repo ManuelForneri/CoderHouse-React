@@ -25,7 +25,7 @@ const ShoppingCartProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("carrrito", JSON.stringify(cart));
+    localStorage.setItem("carrito", JSON.stringify(cart));
   }, [cart]);
 
   const findProduct = (id, array) => array.find((product) => product.id === id);
