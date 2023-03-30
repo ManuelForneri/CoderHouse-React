@@ -3,12 +3,12 @@ import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/ShoppingCartProvider";
 
-const ItemCount = (props) => {
+const ItemCount = ({ stock, id }) => {
   const [count, setCount] = useState(1);
   const { AddProductCart, cart } = useContext(CartContext);
 
   function onSuma() {
-    if (count < props.stock) {
+    if (count < stock) {
       setCount(count + 1);
     }
   }
@@ -17,6 +17,16 @@ const ItemCount = (props) => {
       setCount(count - 1);
     }
   }
+
+  const onProducAdd = () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Agregado al carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <div className="flex flex-col  gap-5">
@@ -38,7 +48,8 @@ const ItemCount = (props) => {
       </div>
       <Button
         onClick={() => {
-          AddProductCart(id, count);
+          AddProductCart(count, id);
+          onProducAdd();
         }}
         className="color-principal shadow-none hover:shadow-white  "
       >
