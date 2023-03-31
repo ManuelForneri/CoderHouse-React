@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import { CartContext } from "../context/ShoppingCartProvider";
 
 const Cart = () => {
-  const { cart, clearCart } = useContext(CartContext);
+  const { cart, clearCart, removeProduct } = useContext(CartContext);
   let total = 0;
 
   function onClearCart() {
@@ -24,6 +24,22 @@ const Cart = () => {
       }
     });
   }
+  const onRemoveProduct = (id) => {
+    Swal.fire({
+      title: "Esta seguro que quiere eliminar el producto!",
+      text: "",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Producto!", " eliminado correctamente.", "success");
+        removeProduct(id);
+      }
+    });
+  };
   console.log(cart);
 
   return (
@@ -52,7 +68,7 @@ const Cart = () => {
                 </span>
               </div>
               <Button
-                onClick=""
+                onClick={() => onRemoveProduct(p.id)}
                 className="text-white color-principal rounded-none hover:bg-white hover:text-black text-center p-3"
               >
                 Eliminar

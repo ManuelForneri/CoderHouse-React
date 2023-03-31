@@ -45,6 +45,23 @@ const ShoppingCartProvider = ({ children }) => {
     setCart(newCart);
     setCartQuantity(total);
   };
+
+  const removeProduct = (id) => {
+    let itemRemove = findProduct(id, cart);
+    let quantity = itemRemove.quantity--;
+    let posInCart = cart.indexOf(itemRemove);
+    let newCart = cart.filter((product) => product.id !== id);
+
+    if (cart[posInCart].quantity === 0) {
+      setCart(newCart);
+    } else {
+      setCart([...newCart, { ...itemRemove, quantity: quantity - 1 }]);
+    }
+
+    if (cart.length == 0) {
+      clearCart();
+    }
+  };
   const clearCart = () => {
     setCart([]);
     setCartQuantity(0);
@@ -59,6 +76,7 @@ const ShoppingCartProvider = ({ children }) => {
         setCart,
         cartQuantity,
         clearCart,
+        removeProduct,
       }}
     >
       {children}
