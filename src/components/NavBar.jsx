@@ -14,12 +14,7 @@ function NavBar() {
           </Link>
           <Link to="/products">
             <button className="hover:bg-gray-200 p-2 text-white hover:text-black ">
-              Products
-            </button>
-          </Link>
-          <Link to="/contacto">
-            <button className="hover:bg-gray-200 p-2 text-white hover:text-black ">
-              Contacto
+              Productos
             </button>
           </Link>
         </div>

@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
 import Loading from "./Loading";
+import SelectCategory from "./SelectCategory";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
@@ -30,26 +31,7 @@ function ItemListContainer() {
 
   return (
     <div className=" flex flex-wrap gap-8 justify-center p-5 w-full">
-      <div className="flex gap-6 text-white  ">
-        <Link
-          to="/categoria/Joyeria"
-          className="color-principal p-3 hover:bg-white hover:text-black"
-        >
-          Joyeria
-        </Link>
-        <Link
-          to="/categoria/Relojeria"
-          className="color-principal p-3 hover:bg-white hover:text-black"
-        >
-          Relojeria
-        </Link>
-        <Link
-          to="/categoria/Varios"
-          className="color-principal p-3 hover:bg-white hover:text-black"
-        >
-          Varios
-        </Link>
-      </div>
+      <SelectCategory />
       {loading ? <Loading /> : <ItemList products={products} />}
     </div>
   );

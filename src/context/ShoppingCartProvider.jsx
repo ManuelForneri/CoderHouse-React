@@ -28,6 +28,12 @@ const ShoppingCartProvider = ({ children }) => {
     localStorage.setItem("carrito", JSON.stringify(cart));
   }, [cart]);
 
+  function removeQuantity() {
+    if (cartQuantity > 0) {
+      setCartQuantity(cartQuantity - 1);
+    }
+  }
+
   const findProduct = (id, array) => array.find((product) => product.id === id);
 
   const AddProductCart = (quantity, id) => {
@@ -51,7 +57,7 @@ const ShoppingCartProvider = ({ children }) => {
     let quantity = itemRemove.quantity--;
     let posInCart = cart.indexOf(itemRemove);
     let newCart = cart.filter((product) => product.id !== id);
-
+    removeQuantity();
     if (cart[posInCart].quantity === 0) {
       setCart(newCart);
     } else {
