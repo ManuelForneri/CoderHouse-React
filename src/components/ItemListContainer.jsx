@@ -30,9 +30,15 @@ function ItemListContainer() {
   console.log(products);
 
   return (
-    <div className=" flex flex-wrap gap-8 justify-center p-5 w-full">
-      <SelectCategory />
-      {loading ? <Loading /> : <ItemList products={products} />}
+    <div className=" flex flex-wrap gap-8 justify-center p-5 w-full min-h-screen">
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className="flex flex-col items-center ">
+          <SelectCategory />
+          <ItemList products={products} />
+        </div>
+      )}
     </div>
   );
 }

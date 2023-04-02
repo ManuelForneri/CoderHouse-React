@@ -2,6 +2,7 @@ import { Button } from "@material-tailwind/react";
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { CartContext } from "../context/ShoppingCartProvider";
+import FormCart from "./FormCart";
 
 const Cart = () => {
   const { cart, clearCart, removeProduct } = useContext(CartContext);
@@ -77,6 +78,7 @@ const Cart = () => {
           );
         })}
       </div>
+      {cart.length > 0 ? <FormCart /> : ""}
       <div className="text-white text-3xl text-center m-5">
         Total : ${total}
       </div>

@@ -75,6 +75,12 @@ circle {
   background-color: #fcf6ef;
 }
 
+.formulario-cart {
+  margin: 0 auto;
+  width: 80%;
+
+  background-color: #fcf6ef;
+}
 .form-label {
   font-family: "Lato", sans-serif;
   color: #c28f38;
