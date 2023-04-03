@@ -45,7 +45,15 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex justify-center flex-wrap min-h-screen gap-5">
+      {cart.length == 0 ? (
+        <div className="min-h-screen flex items-center justify-center">
+          <h1 className="text-white text-4xl">El Carrito esta vacio</h1>
+        </div>
+      ) : (
+        ""
+      )}
+
+      <div className="flex justify-center flex-wrap  gap-5">
         {cart.map((p) => {
           {
             total += p.Precio * p.quantity;

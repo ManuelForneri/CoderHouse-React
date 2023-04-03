@@ -34,6 +34,9 @@ const FormCart = () => {
   const orderCollection = collection(db, "orden");
   return (
     <div className="m-5">
+      <div className="text-white text-2xl text-center">
+        Formulario de compra
+      </div>
       <form
         onSubmit={comprarProd}
         method="get"
