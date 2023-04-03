@@ -49,7 +49,7 @@ const FormCart = () => {
           type="text"
           id="nombre"
           class="form-input text-dark"
-          required=""
+          required
           onChange={(e) => {
             setName(e.target.value);
           }}
@@ -62,7 +62,7 @@ const FormCart = () => {
           type="text"
           id="apellido"
           class="form-input text-dark"
-          required=""
+          required
           onChange={(e) => {
             setLastName(e.target.value);
           }}
@@ -75,7 +75,7 @@ const FormCart = () => {
           type="email"
           id="email"
           class="form-input text-dark"
-          required=""
+          required
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -88,7 +88,7 @@ const FormCart = () => {
           type="text"
           id="telefono"
           class="form-input text-dark"
-          required=""
+          required
           onChange={(e) => {
             setPhone(e.target.value);
           }}
