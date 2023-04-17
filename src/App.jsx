@@ -10,6 +10,7 @@ import ShoppingCartProvider from "./context/ShoppingCartProvider";
 import Contact from "./components/Contact";
 import Loading from "./components/Loading";
 import { useEffect, useState } from "react";
+import Login from "./components/Login";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -39,6 +40,7 @@ function App() {
             <Route exact path="/item/:id" element={<ItemDetailContainer />} />
             <Route exact path="/carrito" element={<Cart />} />
             <Route exact path="/contacto" element={<Contact />} />
+            <Route exact path="/login" element={<Login />} />
           </Routes>
           <Footer />
         </BrowserRouter>

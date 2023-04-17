@@ -2,7 +2,7 @@ import React from "react";
 
 const Welcome = () => {
   return (
-    <div className="h-screen flex justify-center items-center flex-col">
+    <div className="h-screen flex justify-center items-center flex-col animated fadeInDown">
       <h1 className=" text-white text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white items-center">
         El Abuelo Tessore
       </h1>
