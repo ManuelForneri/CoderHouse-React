@@ -94,7 +94,7 @@ const FormCart = () => {
           }}
         />
 
-        <input type="submit" className="btn-submit" value="Confirar compra" />
+        <input type="submit" className="btn-submit" value="Confirmar compra" />
       </form>
     </div>
   );

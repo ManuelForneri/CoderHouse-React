@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { Link, useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
-import Loading from "./Loading";
+import LoadingCircle from "./LoadingCircle";
 import SelectCategory from "./SelectCategory";
 
 function ItemListContainer() {
@@ -32,7 +32,7 @@ function ItemListContainer() {
   return (
     <div className=" flex flex-wrap gap-8 justify-center p-5 w-full min-h-screen">
       {loading ? (
-        <Loading />
+        <LoadingCircle />
       ) : (
         <div className="flex flex-col items-center ">
           <SelectCategory />
