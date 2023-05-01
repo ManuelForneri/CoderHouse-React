@@ -25,13 +25,15 @@ function NavBar() {
             </button>
           </Link>
         </div>
-        <div className="flex">
+        <div className="flex items-center">
           <CartWidget />
-          <Link to="/login">
+          {/*
+            <Link to="/login">
             <Button className="flex bg-transparent items-center text-white hover:text-black text-2xl border-opacity-0 hover:bg-gray-200 shadow-none hover:shadow-none rounded-none p-2 ">
               <VscAccount />
             </Button>
           </Link>
+  */}
         </div>
       </div>
     </nav>
