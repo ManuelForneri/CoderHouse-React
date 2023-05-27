@@ -1,8 +1,8 @@
 import { Button } from "@material-tailwind/react";
 import { useContext } from "react";
 import Swal from "sweetalert2";
-import { CartContext } from "../context/ShoppingCartProvider";
-import FormCart from "./FormCart";
+import FormCart from "../FormCart/FormCart";
+import { CartContext } from "../../context/ShoppingCartProvider";
 
 const Cart = () => {
   const { cart, clearCart, removeProduct } = useContext(CartContext);

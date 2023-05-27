@@ -1,7 +1,7 @@
 import { Button } from "@material-tailwind/react";
 import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
-import { CartContext } from "../context/ShoppingCartProvider";
+import { CartContext } from "../../context/ShoppingCartProvider";
 
 const ItemCount = ({ stock, id }) => {
   const [count, setCount] = useState(1);

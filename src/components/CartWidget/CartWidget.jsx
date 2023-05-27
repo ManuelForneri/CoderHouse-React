@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Button, IconButton } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../context/ShoppingCartProvider";
+import { CartContext } from "../../context/ShoppingCartProvider";
 
 function CartWidget() {
   const { cartQuantity } = useContext(CartContext);

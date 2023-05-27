@@ -1,0 +1,32 @@
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  height: auto;
+  background-color: #b7ac92;
+  padding: 20px;
+  margin-top: auto;
+}
+footer p {
+  color: #fff;
+}
+.hover-whatsapp:hover {
+  color: aquamarine;
+}
+.hover-instagram:hover {
+  color: deeppink;
+}
+.hover-facebook:hover {
+  color: steelblue;
+}
+.redes {
+  transition: all 0.5s;
+  font-size: x-large;
+  color: #ffffff;
+}
+.redes-container {
+  display: flex;
+  gap: 20px;
+}

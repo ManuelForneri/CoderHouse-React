@@ -1,16 +1,16 @@
 import "./App.css";
-import ItemListContainer from "./components/ItemListContainer";
-import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import NavBar from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Welcome from "./components/Welcome";
-import Footer from "./components/Footer";
-import ItemDetailContainer from "./components/ItemDetailContainer";
-import Cart from "./components/Cart";
+import Welcome from "./components/Welcome/Welcome";
+import Footer from "./components/Footer/Footer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Cart from "./components/Cart/Cart";
 import ShoppingCartProvider from "./context/ShoppingCartProvider";
-import Contact from "./components/Contact";
-import Loading from "./components/Loading";
+import Contact from "./components/Contact/Contact";
+import Loading from "./components/Loading/Loading";
 import { useEffect, useState } from "react";
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 
 function App() {
   const [loading, setLoading] = useState(true);

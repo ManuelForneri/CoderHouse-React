@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { collection, getFirestore, addDoc } from "firebase/firestore";
-import { CartContext } from "../context/ShoppingCartProvider";
 import Swal from "sweetalert2";
+import { CartContext } from "../../context/ShoppingCartProvider";
 
 const FormCart = () => {
   const [name, setName] = useState("");

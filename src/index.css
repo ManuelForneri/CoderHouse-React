@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*IMPORTS*/
+@import url("./components/Footer/Footer.css") all;
+
 * {
   margin: 0;
   padding: 0;

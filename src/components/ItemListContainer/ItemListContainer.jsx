@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import ItemList from "./ItemList";
+import ItemList from "../ItemList/ItemList";
 import { Link, useParams } from "react-router-dom";
 import { collection, getDocs, getFirestore } from "firebase/firestore";
-import LoadingCircle from "./LoadingCircle";
-import SelectCategory from "./SelectCategory";
+import LoadingCircle from "../LoadingCircle/LoadingCircle";
+import SelectCategory from "../SelecCategory/SelectCategory";
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
