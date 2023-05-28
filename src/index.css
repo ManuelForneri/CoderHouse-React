@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 /*IMPORTS*/
-@import url("./components/Footer/Footer.css") all;
 
 * {
   margin: 0;
