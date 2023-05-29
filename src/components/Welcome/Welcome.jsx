@@ -13,7 +13,7 @@ const Welcome = () => {
             relojes, grabados de placas, orfebrería, artículos de marroquineria.
           </div>
           <a href="#vermas" aria-label="Ver mas sobre nosotros">
-            <button>Ver mas</button>
+            <button className="button-welcome">Ver mas</button>
           </a>
         </section>
       </div>

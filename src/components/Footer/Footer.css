@@ -1,4 +1,4 @@
-footer {
+.footer {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -9,7 +9,7 @@ footer {
   padding: 20px;
   margin-top: auto;
 }
-footer p {
+.footer p {
   color: #fff;
 }
 .hover-whatsapp:hover {

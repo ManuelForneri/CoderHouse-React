@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+/*Button welcome*/
+.button-welcome {
+  padding: 0.8em 1.8em;
+  border: 2px solid #b7ac92;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: 0.3s;
+  z-index: 1;
+  font-family: "Lato", sans-serif;
+  color: #b7ac92;
+}
+.button-welcome::before {
+  content: "";
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #b7ac92;
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+.button-welcome:hover {
+  color: #111;
+}
+.button-welcome:hover::before {
+  width: 105%;
+}
+
+/*Fin button welcome*/
+.container-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.titles {
+  font-size: 50px;
+  color: #b7ac92;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  margin: 20px;
+  z-index: -1;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: xx-large;
+  font-family: "Montserrat", serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.titleCursive {
+  font-size: 80px;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px 10px #000;
+  letter-spacing: 3px;
+}
+.description {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.container-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.titles {
+  font-size: 50px;
+  color: #b7ac92;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  margin: 20px;
+  z-index: -1;
+}
+
+.subtitle {
+  color: #fff;
+  font-size: xx-large;
+  font-family: "Montserrat", serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.titleCursive {
+  font-size: 80px;
+  font-family: "Merriweather", serif;
+  text-align: center;
+  color: #fff;
+  text-shadow: 4px 4px 10px #000;
+  letter-spacing: 3px;
+}
+.description {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: large;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container-about-more {
+  background-color: #b7ac92;
+  width: 100%;
+  height: 100vh;
+  margin: 20px auto;
+  display: flex;
+}
+.container-about-more div {
+  padding: 21px;
+  font-size: x-large;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+.container-about-more div h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.container-about-more div a {
+  color: #fff;
+}
+.middle {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.news {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #b7ac92;
+  gap: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+.news h2 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+.products-news {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+.container-button-product {
+  display: flex;
+  justify-content: center;
+}
