@@ -21,7 +21,7 @@ const Welcome = () => {
         <div id="vermas" className="container-about-more">
           <div className="middle">
             <img
-              src="assets/interior-negocio.webp  "
+              src="https://i.postimg.cc/4NdMWWb2/interior-negocio.webp"
               alt=""
               className="imagenes"
             />
